@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Dashboard Neyle</title>
+</head>
+<body>
+    <div class="contendorFecha-Hora"> 
+        <p id="hora">Hora</p>
+        <p id="fecha"></p>
+    </div>
+    
+    <div class="contenedorPassword">
+        <input type="number" id="caracteres" value="12" min="12" max="50">
+        <button id="buttonPassword">Generar Contraseña</button>
+        <h4>Contraseña Generada</h4>
+           <p id="contraseñaGenerada"></p>
+    </div>
+
+    <div class="div-Enlaces">
+        <div class="nombre">
+            <h2>Añade tu enlace</h2>
+        </div>
+        <div class="input-enlaces">
+            <input type="text" id="input-nombreEnlace" placeholder="Nombre de tu enlace" required>
+            <input type="text" id="input-enlace" placeholder="Pega aquí tu URL">
+            <button class="buttonEnlaces">Añadir enlace</button>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

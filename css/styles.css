@@ -1,0 +1,19 @@
+
+
+
+.hora-time-password {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.time-Hours {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 500px;
+    overflow: scroll;
+    background-color: red;
+}

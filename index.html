@@ -7,37 +7,44 @@
     <title>Dashboard Neyle</title>
 </head>
 <body>
-    <div class="hora-time-password">
-        <div class="contendorFecha-Hora"> 
-            <p id="hora">Hora</p>
-            <p id="fecha"></p>
-        </div>
+    <div class="wrapper">
+        <div class="hora-time-password">
+            <div class="contendorFecha-Hora"> 
+                <p id="hora"></p>
+                <p id="fecha"></p>
+            </div>
        
-        <div class="container-Time" id="container-Time">
-        </div>
-        <div class="contendorFecha-Hora"> 
-            <p id="hora">Hora</p>
-            <p id="fecha"></p>
-        </div>
-        <div class="contenedorPassword">
-            <input type="number" id="caracteres" value="12" min="12" max="50">
-            <button id="buttonPassword">Generar Contraseña</button>
-            <h4>Contraseña Generada</h4>
-           <p id="contraseñaGenerada"></p>
-        </div>
+            <div class="container-Time" id="container-Time">
+            </div>
+            
+            <div class="contenedorPassword">
+                <input type="number" id="caracteres" value="12" min="12" max="50">
+                <button id="buttonPassword">Generar Contraseña</button>
+                <h4>Contraseña Generada</h4>
+                <p id="contraseñaGenerada"></p>
+            </div>
       
+        </div>
+           <div class="div-Enlaces">
+                <form id="formulario">
+                    <h2>Añade tu enlace</h2>
+                        <div class="input-enlaces">
+                            <input type="text" id="input-nameEnlace" placeholder="Nombre de tu enlace" required>
+                            <input type="text" id="input-enlace" placeholder="Pega aquí tu URL">
+                            <button type="submit" id="buttonEnlaces"  class="buttonEnlaces">Añadir enlace</button>
+                        </div>
+                </form>
+                <ul id="ul-list" class="ul-list"></ul>
+            </div>
+            <footer>
+                <nav>
+                    <a href="./src/components/hora.html" target="_blank"><img src="./src/assets/imgIcon/reloj.png" alt="Reloj"/></a>
+                    <a href="./src/components/password.html" target="_blank"><img src="./src/assets/imgIcon/candado.png" alt="candado"/></a>
+                    <a href="./src/components/enlaces.html" target="_blank"><img src="./src/assets/imgIcon/enlace.png" alt="enlace"/></a>
+                    <a href="./src/components/clima.html" target="_blank"><img src="./src/assets/imgIcon/nube.png" alt="Clima"/></a>
+                </nav>
+            </footer>   
     </div>
-        <div class="div-Enlaces">
-            <form id="formulario">
-                <h2>Añade tu enlace</h2>
-                    <div class="input-enlaces">
-                        <input type="text" id="input-nameEnlace" placeholder="Nombre de tu enlace" required>
-                        <input type="text" id="input-enlace" placeholder="Pega aquí tu URL">
-                        <button type="submit" id="buttonEnlaces"  class="buttonEnlaces">Añadir enlace</button>
-                    </div>
-            </form>
-        <ul id="ul-list" class="ul-list"></ul>
-    </div>
-    <script src="./js/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -93,11 +93,11 @@ const dataHour = forecast.forecastday[0].hour
 const hoursData = dataHour.map(hour => {
     return `<div class="time-Hour">${hour.time} <img src=${current.condition.icon} alt="icon"/> ${hour.temp_c}°C </div>`;
 }).join('');
-    containerTime.innerHTML = `<p>${location.name} / ${location.country} </p> <p>${current.condition.text} </p> 
-    <img src=${current.condition.icon} alt="icon" class="iconBig"/> </br>
-    ${current.precip_in}% </br>
-    ${current.humidity}% </br>
-    ${current.wind_kph}Km/h
+    containerTime.innerHTML = `<div class="container-city"><h2>${location.name} / ${location.country} </h2> <p>${current.condition.text} </p> 
+    <img src=${current.condition.icon} alt="icon" class="iconBig"/> 
+    <p>Precipitaciones: ${current.precip_in}% </p>
+    <p>Humedad: ${current.humidity}% </p>
+    <p>Viento: ${current.wind_kph}Km/h </p>
     <div class="time-Hours">${hoursData}</div>
     `
 })
@@ -109,35 +109,38 @@ const hoursData = dataHour.map(hour => {
 
         // AÑADE TU ENLACE
 
-        const nameEnlace = document.getElementById('input-nameEnlace').value
-        const inputEnlace = document.getElementById('input-enlace').value
+        const nameEnlace = document.getElementById('input-nameEnlace')
+        const inputEnlace = document.getElementById('input-enlace')
         const buttonEnlaces = document.getElementById('buttonEnlaces')
         const ulList = document.getElementById('ul-list')
+        const formulario = document.getElementById('formulario')
 
-        const saveEnlaces = () => {
-            let object = {nameEnlace, inputEnlace}
-            const objetoEnlace = localStorage.setItem('nameEnlace', 'inputEnlace') // en la primera vuelta no existe, en la segunda si.
+        const saveEnlaces = (e) => { 
+            e.preventDefault() // (e) previene el evento de reinicio de la pag
+            let inputName = nameEnlace.value
+            let inputLink = inputEnlace.value
+            let inputValues = {inputName, inputLink}
+            //console.log(inputValues);
+            const objetoEnlace = localStorage.getItem('arrEnlace') // en la primera vuelta no existe, en la segunda si.
             
-            const name = object ? JSON.parse(object) : [] // nos queda un array vacio en la primera.
-        
-            name.push() // aqui el array tiene el chiste
+            const names = objetoEnlace ? JSON.parse(objetoEnlace) : [] // nos queda un array vacio en la primera.
+            console.log(names, `array antes del push`);
+            names.push(inputValues) // aqui el array tiene el chiste
+            console.log(names, `array después del push`);
         
             // console.log(array); //deberia mostrar chiste
         
-            localStorage.setItem('name', JSON.stringify(name))
+            localStorage.setItem('arrEnlace', JSON.stringify(names))
             
-            template(localStorage.getItem('nameEnlace', 'inputEnlace'))//Invocamos esta funcion y le pasamos los jokes guardados en la variable localStorage
+            /*template(localStorage.getItem('nameEnlace', 'inputEnlace'))//Invocamos esta funcion y le pasamos los jokes guardados en la variable localStorage*/
         }
 
 
-/*
-        const formulario = document.getElementById('formulario')
-        console.log(formulario)
+        buttonEnlaces.addEventListener('click', (e) => {
+            console.log(e);
+            saveEnlaces(e)
+        })
 
-        const extraerEnlaces = () => {
-            console.log('Validando...')
-        }
 
-        formulario.addEventListener('submit', extraerEnlaces)
 
-    */
+    

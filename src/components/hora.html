@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styleHora.css">
+    <link rel="stylesheet" href="/styles.css">
     <title>Fecha y hora</title>
 </head>
 <body>
@@ -13,13 +14,14 @@
             <h2>GO HOME</h2>
         </a>
     </header>
-    <div class="wrapper">
-        <div class="hora-time-password">
-            <div class="contendorFecha-Hora"> 
-                <p id="hora"></p>
-                <p id="fecha"></p>
-            </div>
-        </div>
+        <main class="time">
+            <section class="contendorFecha-Hora"> 
+                <h2>Son las...</h2>
+                <div id="hora"  class="hora"></div>
+                <div id="fecha" class="fecha"></div>
+                <div id="mensaje" class="mensaje"></div>
+            </section>
+        </main>
         <footer>
             <nav>
                 <a href="./hora.html" target="_blank"><img src="../assets/imgIcon/reloj.png" alt="Reloj"/></a>
@@ -28,7 +30,7 @@
                 <a href="./clima.html" target="_blank"><img src="../assets/imgIcon/nube.png" alt="Clima"/></a>
             </nav>
         </footer>  
-    </div>
         <script src="../js/hora.js"></script>
+        <script src="../js/scriptRandom.js"></script>
     </body>
     </html>

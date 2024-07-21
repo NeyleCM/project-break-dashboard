@@ -149,5 +149,17 @@ const hoursData = dataHour.map(hour => {
         })
 
 
+        const imagenesRandom = ['./src/assets/imgBackground/ameenfahmy-7RZj4IrPT9Y-unsplash.jpg','./src/assets/imgBackground/ishan-seefromthesky-rj8fMHNPXbg-unsplash.jpg']
 
     
+        const cambioImagenes = () => {
+            const body = document.body
+            const imagenesRandom2 = Math.floor(Math.random() * imagenesRandom.length)
+            
+            body.style.backgroundImage = `url(${imagenesRandom[imagenesRandom2]})`
+            
+        }
+        setInterval(cambioImagenes,5000)
+        
+        cambioImagenes()
+        

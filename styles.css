@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,19 +45,75 @@ table {
 }
 
 /* ------ DESDE AQUÍ ------ */
-body {
-    
-    background-image: url('./src/assets/imgBackground/francesco-ungaro-0NivydVzI00-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 
+html, body {
+    height: 100%;
+    width: 100%;
+    }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-image;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    transition: all 1s ease-out;
+    font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
     width: 100%;
 }
-.wrapper {
-    margin: 100px;
+
+
+header a {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
 }
 
 
+.cohete {
+    width: 32px;
+    filter: invert();
+}
+
+/* HORA Y FECHA */
+
+.contendorFecha-Hora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hora {
+	font-size: 50px;
+	color: #ffffffb0;
+	margin-top: 15px;
+}
+
+.fecha {
+	margin-top: 10px;
+    font-size: 20px;
+    color: #ffffffb0;
+	margin-bottom: 15px;
+}
+
+
+
+/* CLIMA   */
 .climaSection {
         display: flex;
         flex-direction: column;
@@ -86,6 +144,57 @@ body {
         padding: 5px;
     
     }
+
+    /* CONTRASEÑA */
+
+    .inputPassword {
+        display: block;
+        padding: 20px;
+        width: 350px;
+        max-height: 600px;
+        max-width: 900px;
+        color: #f4f4f4;
+        border-radius: 15px;
+        background-color: #33333393;
+      }
+      .inputPassword label {
+        padding: 20px 0 20px 0;
+      }
+    
+      .inputPassword input {
+        margin: 20px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    
+      .buttonPassword {
+        background-color: #0371d8;
+        border: none;
+        color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+     
+    
+      .contraseñaGenerada h4 {
+        font-weight: 600;
+        font-size: 20px;
+        margin-top: 15px;
+      }
+    
+      .contraseñaGenerada p {
+        color: rgb(224, 224, 138);
+        font-size: 20px;
+        margin-top: 10px;
+        max-width: 600px;
+      }
     
     footer {
         display: flex;

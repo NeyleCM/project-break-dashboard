@@ -7,24 +7,22 @@
     <title>Dashboard Neyle</title>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="hora-time-password">
+    <!--<div class="wrapper">-->
+        <section class="hora-time-password">
             <div class="contendorFecha-Hora"> 
-                <p id="hora"></p>
-                <p id="fecha"></p>
+                <p id="hora" class="hora"></p>
+                <p id="fecha" class="fecha"></p>
             </div>
-        <section class="climaSection">
-            <div class="container-Time" id="container-Time">
-            </div>
+                <div class="climaSection">
+                    <div class="container-Time" id="container-Time"></div>
+                    </div>
         </section>
-            <div class="contenedorPassword">
+            <section class="contenedorPassword">
                 <input type="number" id="caracteres" value="12" min="12" max="50">
                 <button id="buttonPassword">Generar Contraseña</button>
                 <h4>Contraseña Generada</h4>
                 <p id="contraseñaGenerada"></p>
-            </div>
-      
-        </div>
+            </section>
            <div class="div-Enlaces">
                 <form id="formulario">
                     <h2>Añade tu enlace</h2>
@@ -44,7 +42,12 @@
                     <a href="./src/components/clima.html" target="_blank"><img src="./src/assets/imgIcon/nube.png" alt="Clima"/></a>
                 </nav>
             </footer>   
-    </div>
+    <!--</div>-->
     <script src="./script.js"></script>
+    <script src="./src/js/scriptRandom.js"></script>
+    <script src="./src/js/clima.js"></script>
+    <script src="./src/js/enlaces.js"></script>
+    <script src="./src/js/hora.js"></script>
+    <script src="./src/js/password.js"></script>
 </body>
 </html>

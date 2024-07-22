@@ -29,14 +29,11 @@ const hora = () => {
 hora()
 
 
-
 // ------ CONTRASEÑAS SEGURAS ------
 
 const inputCarateres = document.getElementById('caracteres')
 const contraseñaGenerada = document.getElementById('contraseñaGenerada')
 const buttonPassword = document.getElementById('buttonPassword')
-
-
 
 const mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const minusculas = "abcdefghijklmnopqrstuvwxyz"
@@ -61,15 +58,18 @@ const generarPassword = () => {
         for (let num = 0; num < numCaracteres; num++) { // Se inicializa la variable con 0, cuantas veces se ejecutará el bucle
             password += aleatoria(allVariables)    // Si la condición: num < numCaracteres sea verdadera continúa, el bucle termina cuando es falsa
         }                                           //numCaracteres es el número total de iteraciones que se quiere que realice el bucle (el número de caracteres en la contraseña).
-       contraseñaGenerada.innerText = password      //Dentro del cuerpo del bucle, se ejecuta esta línea de código 'password += aleatoria(allVariables)' en cada iteración
+       contraseñaGenerada.innerHTML = `
+       <h4>Contraseña Generada</h4>
+                    <p>${password}</p>
+                    `      //Dentro del cuerpo del bucle, se ejecuta esta línea de código 'password += aleatoria(allVariables)' en cada iteración
        aleatoria(allVariables)                      //genera un carácter aleatorio de la cadena allVariables.
                                                     //password += ... agrega (concatena) este carácter aleatorio a la variable password.
         }
 
         buttonPassword.addEventListener('click', generarPassword)
 
+       
         // ---- CLIMA -----
-
         const containerTime = document.getElementById('container-Time')
 
         let city = 'Madrid'
@@ -92,21 +92,24 @@ console.log(city)
 const dataHour = forecast.forecastday[0].hour
 const hoursData = dataHour.map(hour => {
     let horaSola = hour.time.split(' ')[1]
-    return `<div class="time-Hour">${horaSola} <img src=${current.condition.icon} alt="icon"/> ${hour.temp_c}°C </div>`;
+    return `<div class="time-Hour">${horaSola} <img src=${current.condition.icon} alt="icon"/> <p class="yellow">${hour.temp_c}°C</p></div>`;
 }).join('');
-    containerTime.innerHTML = `<div class="container-city"><h2>${location.name} / ${location.country} </h2> <p>${current.condition.text} </p> 
-    <div class="divTemp>"<img src=${current.condition.icon} alt="icon" class="iconBig"/> 
-    <div class="Temp">
-    ${current.temp_c}
-    <img src="./src/assets/imgIcon/celsius.png" alt="Celsius" class="celsius">
+    containerTime.innerHTML = `<div class="container-city"><h2>${location.name} / ${location.country} </h2> <p class="yellow">${current.condition.text} </p> 
+    <div class="divTemp"><img src=${current.condition.icon} alt="icon" class="iconBig"/> 
+    <div class="temp">
+    <p class="tempNum">${current.temp_c}</p>
+    <img src="./src/assets/imgIcon/celsius.png" alt="Celsius" class="celsius"/>
     </div>
+    <div class="temp2">
     <p>Precipitaciones: ${current.precip_in}% </p>
     <p>Humedad: ${current.humidity}% </p>
     <p>Viento: ${current.wind_kph}Km/h </p>
     </div>
+    </div>
     <div class="time-Hours">${hoursData}</div>
     `
 })
+
 
 
 

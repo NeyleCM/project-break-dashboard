@@ -20,17 +20,19 @@ console.log(city)
 const dataHour = forecast.forecastday[0].hour
 const hoursData = dataHour.map(hour => {
     let horaSola = hour.time.split(' ')[1]
-    return `<div class="time-Hour">${horaSola} <img src=${current.condition.icon} alt="icon"/> ${hour.temp_c}°C </div>`;
+    return `<div class="time-Hour">${horaSola} <img src=${current.condition.icon} alt="icon"/> <p class="yellow">${hour.temp_c}°C</p></div>`;
 }).join('');
-    containerTime.innerHTML = `<div class="container-city"><h2>${location.name} / ${location.country} </h2> <p>${current.condition.text} </p> 
-    <div class="divTemp>"<img src=${current.condition.icon} alt="icon" class="iconBig"/> 
-    <div class="Temp">
-    ${current.temp_c}
-    <img src="../assets/imgIcon/celsius.png" alt="Celsius" class="celsius">
+    containerTime.innerHTML = `<div class="container-city"><h2>${location.name} / ${location.country} </h2> <p class="yellow">${current.condition.text} </p> 
+    <div class="divTemp"><img src=${current.condition.icon} alt="icon" class="iconBig"/> 
+    <div class="temp">
+    <p class="tempNum">${current.temp_c}</p>
+    <img src="../assets/imgIcon/celsius.png" alt="Celsius" class="celsius"/>
     </div>
+    <div class="temp2">
     <p>Precipitaciones: ${current.precip_in}% </p>
     <p>Humedad: ${current.humidity}% </p>
     <p>Viento: ${current.wind_kph}Km/h </p>
+    </div>
     </div>
     <div class="time-Hours">${hoursData}</div>
     `

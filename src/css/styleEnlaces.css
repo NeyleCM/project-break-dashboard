@@ -62,12 +62,17 @@ transition: all 1s ease-out;
 
 .divEnlaces{
 	display: flex;
-	justify-content: flex-start;
 	align-items: center;
 	width: 430px;
 	gap: 10px;
 	font-size: 25px;
 	margin-bottom: 15px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 main img {

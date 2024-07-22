@@ -70,7 +70,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
+    /*flex-grow: 1;*/
 }
 
 .container-Time {
@@ -82,16 +82,45 @@ main {
 
   }
   
-.celsius {
-    width: 32px;
+.temp img {
+    width: 20px;
     filter: invert();
 }
 
+.yellow {
+    color: #ffe5c1;
+}
+
+.divTemp {
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+}
+.divTemp .celsius {
+    width: 32px;
+}
+
+.temp {
+    display: flex;
+    align-items: center;
+}
+
+.tempNum {
+    font-size: 50px;
+	color: #ffffffef;
+}
+
+.temp2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ffffffb0;
+}
 
 .time-Hours {
     display: flex;
     overflow: scroll;
-    width: 440px;
     padding: 5px;
 
 }

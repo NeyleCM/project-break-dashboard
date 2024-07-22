@@ -7,34 +7,38 @@
     <title>Dashboard Neyle</title>
 </head>
 <body>
-    <!--<div class="wrapper">-->
-        <section class="hora-time-password">
+<div class="wrapper">
+    <section>
+        <div class="divEnlaces">
+            <h1>Añade tu enlace de interés </h1>
+            <img src="./src/assets/imgIcon/enlace.png" alt="enlace">
+        </div>
+        <form id="formulario">
+                    <input type="text" id="input-nameEnlace" placeholder="Nombre de tu enlace" required>
+                    <input type="text" id="input-enlace" placeholder="Pega aquí tu URL">
+                    <button type="submit" id="buttonEnlaces"  class="buttonEnlaces">Añadir enlace</button>
+        </form>
+        <ul id="ul-list" class="ul-list"></ul>
+    </section>
+    <section class="hora-time-password">
             <div class="contendorFecha-Hora"> 
                 <p id="hora" class="hora"></p>
                 <p id="fecha" class="fecha"></p>
             </div>
                 <div class="climaSection">
                     <div class="container-Time" id="container-Time"></div>
-                    </div>
-        </section>
-            <section class="contenedorPassword">
-                <input type="number" id="caracteres" value="12" min="12" max="50">
-                <button id="buttonPassword">Generar Contraseña</button>
-                <h4>Contraseña Generada</h4>
-                <p id="contraseñaGenerada"></p>
-            </section>
-           <div class="div-Enlaces">
-                <form id="formulario">
-                    <h2>Añade tu enlace</h2>
-                        <div class="input-enlaces">
-                            <input type="text" id="input-nameEnlace" placeholder="Nombre de tu enlace" required>
-                            <input type="text" id="input-enlace" placeholder="Pega aquí tu URL">
-                            <button type="submit" id="buttonEnlaces"  class="buttonEnlaces">Añadir enlace</button>
-                        </div>
-                </form>
-                <ul id="ul-list" class="ul-list"></ul>
+                </div>
+        <div class="inputPassword">
+            <label for="caracteres">Número de caracteres de la contraseña</label>
+            <input type="number" id="caracteres" value="12" min="12" max="50">
+            <button id="buttonPassword" class="buttonPassword">Generar Contraseña</button>
+            <div id="contraseñaGenerada" class="contraseñaGenerada">
+               
             </div>
-            <footer>
+        </div>
+    </section>
+</div>
+            <footer class="footer1">
                 <nav>
                     <a href="./src/components/hora.html" target="_blank"><img src="./src/assets/imgIcon/reloj.png" alt="Reloj"/></a>
                     <a href="./src/components/password.html" target="_blank"><img src="./src/assets/imgIcon/candado.png" alt="candado"/></a>
@@ -42,7 +46,7 @@
                     <a href="./src/components/clima.html" target="_blank"><img src="./src/assets/imgIcon/nube.png" alt="Clima"/></a>
                 </nav>
             </footer>   
-    <!--</div>-->
+   
     <script src="./script.js"></script>
     <script src="./src/js/scriptRandom.js"></script>
     <script src="./src/js/clima.js"></script>

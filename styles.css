@@ -56,7 +56,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: background-image;
+    transition: background-image 1s ease-in;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,9 +71,12 @@ body {
 
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
 }
 
 header {
@@ -87,7 +90,7 @@ header a {
     display: flex;
     gap: 20px;
     padding: 20px;
-    text-decoration: none;
+    text-decoration: none; 
     color: white;
 }
 
@@ -99,6 +102,11 @@ header a {
 
 /* --- ENLACES ----- */
 
+.sectionEnlaces {
+  display: flex;
+  flex-direction: column;
+  margin-right: 150px;
+}
 
 .divEnlaces{
 	display: flex;
@@ -176,6 +184,10 @@ li {
 .hora-time-password {
   display: flex;
   flex-direction: column;
+  width: 100px;
+  margin: 0 0 0 200px;
+  align-items: center;
+  justify-content: flex-start;
   gap: 50px;
 }
 
@@ -184,8 +196,6 @@ li {
 .contendorFecha-Hora {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .hora {
@@ -357,7 +367,15 @@ color: #ffffffef;
         filter: invert();
     }
 
-
-
-
-/*  --- index 2 HTML - clima */
+@media (max-width: 700px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hora-time-password {
+        order: 1;
+    }
+    .sectionEnlaces {
+        order: 2;
+    }
+}

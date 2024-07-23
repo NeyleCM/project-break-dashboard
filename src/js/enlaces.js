@@ -41,8 +41,8 @@
 const template = (data) => {
     const allListItems = data.map((item, index) => {
         return  `<li>
+        <button class="buttonEnlace" onclick="removeItem(${index})">X</button>
         <a href="${item.inputLink}" target="_blank">${item.inputName}</a>
-        <button class='buttonEnlace' onclick="removeItem(${index})">Eliminar</button>
     </li>`;
     }).join('')
 

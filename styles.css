@@ -49,6 +49,7 @@ table {
 html, body {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
     }
 
 body {
@@ -62,11 +63,11 @@ body {
     background-repeat: no-repeat;
     color: white;
     height: 100vh;
-    width: 100%;
     transition: all 1s ease-out;
     font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	font-style: normal;
+	  font-weight: 400;
+	  font-style: normal;
+  
 }
 
 .wrapper {
@@ -110,7 +111,8 @@ header a {
 
 .divEnlaces{
 	display: flex;
-	width: 430px;
+  flex-wrap: wrap;
+	width: 100%;
 	gap: 10px;
 	font-size: 25px;
 	margin-bottom: 15px;
@@ -199,8 +201,8 @@ li {
 .hora-time-password {
   display: flex;
   flex-direction: column;
-  width: 100px;
-  margin: 0 0 0 200px;
+  width: 100%;
+  max-width: 300px;
   align-items: center;
   justify-content: flex-start;
   gap: 50px;
@@ -211,19 +213,22 @@ li {
 .contendorFecha-Hora {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .hora {
 	font-size: 50px;
 	color: #ffffffb0;
 	margin-top: 15px;
+  text-align: center;
 }
 
 .fecha {
 	margin-top: 10px;
-    font-size: 20px;
-    color: #ffffffb0;
+  font-size: 20px;
+  color: #ffffffb0;
 	margin-bottom: 15px;
+  text-align: center;
 }
 
 
@@ -240,11 +245,11 @@ li {
   
 .container-Time {
   padding: 20px;
+  width: 100%;
   max-width: 450px;
   color: #f4f4f4;
   border-radius: 15px;
   background-color: #33333393;
-
 }
 
 .temp img {
@@ -260,7 +265,9 @@ li {
   display: flex;
   justify-content: space-around;
   height: 80px;
+  width: 100%;
 }
+
 .divTemp .celsius {
   width: 32px;
 }
@@ -272,7 +279,7 @@ li {
 
 .tempNum {
   font-size: 50px;
-color: #ffffffef;
+  color: #ffffffef;
 }
 
 .temp2 {
@@ -287,7 +294,7 @@ color: #ffffffef;
   display: flex;
   overflow: scroll;
   padding: 5px;
-
+  width: 100%;
 }
 
 
@@ -338,8 +345,9 @@ color: #ffffffef;
     padding: 10px;
     border-radius: 5px;
     font-family: "Poppins", sans-serif;
-	font-weight: 400;
-	font-style: normal;
+	  font-weight: 400;
+	  font-style: normal;
+    cursor: pointer;
   }
  
 
@@ -400,16 +408,3 @@ color: #ffffffef;
         padding: 10px;
         width: 50%;
     }
-
-@media (max-width: 700px) {
-    .wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-    .hora-time-password {
-        order: 1;
-    }
-    .sectionEnlaces {
-        order: 2;
-    }
-}

@@ -20,7 +20,7 @@ getTime().then(city => {
 const dataHour = forecast.forecastday[0].hour
 let hoursData = '';
 dataHour.forEach(hour => {
-    let horaSola = hour.time.split(' ')[1]
+    const horaSola = hour.time.split(' ')[1]
     hoursData += `<div class="time-Hour">${horaSola} <img src=${hour.condition.icon} alt="icon"/> <p class="yellow">${hour.temp_c}°C</p></div>`;
 });
     containerTime.innerHTML = `<div class="container-city"><h2>${location.name} / ${location.country} </h2> <p class="yellow">${current.condition.text} </p> 

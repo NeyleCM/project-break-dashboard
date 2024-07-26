@@ -150,11 +150,12 @@ button {
 
 .ul-list {
   display: flex;
+  flex-wrap: wrap;
   overflow: scroll;
   gap: 20px;
-  width: 500px;
-  height: 500px;
+  height: 400px;
   margin-top: 20px;
+  padding: 20px;
 }
 
 .ul-list a {
@@ -164,16 +165,30 @@ button {
 
 li {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   gap: 5px;
-  min-width: 150px;
-  height: 80px;
+  min-width: 100px;
+  height: 50px;
   border-radius: 5px;
   background-color: #33333393;
   text-decoration: none;
 }
+
+.ul-list li button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+	width: 20px;
+	height: 20px;
+  background-color: #33333393;
+	top: -8px;
+	right: -5px;
+}
+
 
 .buttonEnlace {
   background-color: #33333300;
@@ -342,29 +357,48 @@ color: #ffffffef;
   }
       
   .footer1 {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin: 0 30px 20px 0;
-        padding-bottom: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px white solid;
-    } 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position:relative;
+    width: 50%;
+    left: 25%;
+    margin: 0 30px 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px white solid;
+}
+
+  footer .nav1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    filter: invert();
+    padding: 10px;
+    width: 100%;
+}
 
   .footer2 {
         display: flex;
+        flex-wrap: wrap;
         justify-content: flex-end;
-        width: 100%;
+        position:relative;
+        width: 50%;
+        left: 25%;
         margin: 0 30px 20px 0;
         padding-bottom: 10px;
         border-bottom: 1px white solid;
     }
-    
-  footer nav {
+
+
+  footer .nav2 {
         display: flex;
         flex-wrap: wrap;
+        justify-content: flex-end;
         gap: 20px;
         filter: invert();
+        padding: 10px;
+        width: 50%;
     }
 
 @media (max-width: 700px) {

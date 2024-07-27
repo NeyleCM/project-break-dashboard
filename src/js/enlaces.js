@@ -15,7 +15,7 @@
 
         // Asegurarse de que el enlace comience con http:// o https://
         if (!inputLink.startsWith('http://') && !inputLink.startsWith('https://')) {
-        inputLink = 'http://' + inputLink;
+        inputLink = 'https://' + inputLink;
         }
 
        let inputValues = {inputName, inputLink}
